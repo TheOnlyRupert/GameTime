@@ -12,7 +12,8 @@ namespace GameClient.Source.ViewModel {
             configFile.GetSettings_OneTime();
 
             IconImage = "../../Resources/icons/icon_main.png";
-            CurrentModule = "Source/Modules/Menu.xaml";
+            CurrentModule = "Source/Modules/monopoly/PropertyUpgradeViewer.xaml";
+            //CurrentModule = "Source/Modules/Menu.xaml";
 
             CrossViewMessenger simpleMessenger = CrossViewMessenger.Instance;
             simpleMessenger.MessageValueChanged += OnSimpleMessengerValueChanged;

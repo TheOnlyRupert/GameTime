@@ -1,0 +1,47 @@
+<Page x:Class="GameClient.Source.Modules.monopoly.InJail" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d">
+    <Grid HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="64"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="{Binding JailTurnText}" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="32" Margin="0 0 0 32"/>
+
+            <Button Content="Pay $50 fine" FontSize="18" Command="{Binding ButtonCommand}" CommandParameter="payfine"/>
+            <Button Content="Roll Die (Hope for doubles)" FontSize="18" Command="{Binding ButtonCommand}" CommandParameter="rolldie"/>
+            <Button Content="Use 'Get Out of Jail Free' Card (If available)" FontSize="18" Command="{Binding ButtonCommand}" CommandParameter="usecard"/>
+
+            <Grid Margin="16">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="0" VerticalAlignment="Center" Margin="0 24">
+                    <TextBlock Text="Available Cash  $" FontSize="24" VerticalAlignment="Center"/>
+                    <TextBox Text="{Binding YourAvailableCash}" FontSize="24" HorizontalContentAlignment="Center" Width="96" IsReadOnly="True"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1">
+                    <TextBlock Text="Available 'Get Out of Jail Free' Cards  🠧" FontSize="24" VerticalAlignment="Center"/>
+                    <Grid ShowGridLines="True">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Text="No Chance Card" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
+                        <TextBlock Text="No Community Chest Card" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
+                        <Image Source="../../../Resources/monopoly/cards/chancejail.png" Grid.Column="0" Width="196" Visibility="{Binding JailFreeChanceVisibility}"/>
+                        <Image Source="../../../Resources/monopoly/cards/chestjail.png" Grid.Column="1" Width="196" Visibility="{Binding JailFreeChestVisibility}"/>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+
+        <Button Content="Postpone" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Command="{Binding ButtonCommand}" CommandParameter="exit"
+                Padding="16 8"/>
+    </Grid>
+</Page>

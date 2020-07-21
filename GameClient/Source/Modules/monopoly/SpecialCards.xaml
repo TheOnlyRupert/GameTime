@@ -1,0 +1,24 @@
+<Page x:Class="GameClient.Source.Modules.monopoly.SpecialCards" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d">
+    <Grid HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="96"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="You Gain Some, You Lose Some" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="32"/>
+        <Grid Grid.Row="1">
+            <Image Source="{Binding SpecialCardBackgroundImage}" Width="720"/>
+            <TextBlock Text="{Binding SpecialCardText}" FontSize="28" Width="720" Padding="48" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Grid>
+
+        <StackPanel Grid.Row="2">
+            <TextBlock Text="This card has been added to your inventory." VerticalAlignment="Center" Foreground="Red" HorizontalAlignment="Center" FontSize="16" Margin="0 0 0 16"
+                       Visibility="{Binding FreeJailCardVisibility}"/>
+            <Button Content="Continue" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Command="{Binding ButtonCommand}" CommandParameter="exit"
+                    Padding="16 8"/>
+        </StackPanel>
+    </Grid>
+</Page>

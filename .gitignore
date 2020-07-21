@@ -4,6 +4,10 @@
 /bin
 /obj
 /Versions
+/GameClient/bin
+/GameClient/obj
+/GameServer/bin
+/GameServer/obj
 
 # Ignored Files:
 .gitattributes

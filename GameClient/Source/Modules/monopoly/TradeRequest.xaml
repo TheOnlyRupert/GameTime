@@ -1,0 +1,96 @@
+<Page x:Class="GameClient.Source.Modules.monopoly.TradeRequest" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d">
+    <Grid HorizontalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="16"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="16"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Width="348">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="48"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Your Inventory" FontSize="24" VerticalAlignment="Center" Grid.Row="0"/>
+            <TextBox Text="{Binding YourAvailableCash}" Grid.Row="1" IsReadOnly="True" FontSize="24" Width="96" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+
+            <ListView Grid.Row="2" ItemsSource="{Binding YourAvailableInventory}"/>
+            <Button Content="Add Item 🠆" Grid.Row="3" FontSize="24" HorizontalAlignment="Right" Width="192" VerticalAlignment="Center" Command="{Binding ButtonCommand}"
+                    CommandParameter="additemyour"/>
+        </Grid>
+
+        <Grid Width="348" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="48"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="{Binding PartnerInventoryText}" FontSize="24" VerticalAlignment="Center" Grid.Row="0"/>
+            <TextBox Text="{Binding PartnerAvailableCash}" Grid.Row="1" IsReadOnly="True" FontSize="24" Width="96" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+
+            <ListView Grid.Row="2" ItemsSource="{Binding PartnerAvailableInventory}"/>
+            <Button Content="Add Item 🠆" Grid.Row="3" FontSize="24" HorizontalAlignment="Right" Width="192" VerticalAlignment="Center" Command="{Binding ButtonCommand}"
+                    CommandParameter="additempartner"/>
+        </Grid>
+
+        <Grid Grid.Column="4" Width="384">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="48"/>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="48"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Your Offerings" FontSize="24" VerticalAlignment="Center" Grid.Row="0"/>
+            <StackPanel Orientation="Horizontal" Grid.Row="1" VerticalAlignment="Center">
+                <Button Content="--" FontSize="18" Width="48" Command="{Binding ButtonCommand}" CommandParameter="yousub10"/>
+                <Button Content="-" FontSize="18" Width="48" Command="{Binding ButtonCommand}" CommandParameter="yousub"/>
+                <TextBox Text="{Binding YourOfferingCash}" IsReadOnly="True" FontSize="24" Width="96" HorizontalContentAlignment="Center"/>
+                <Button Content="+" FontSize="18" Width="48" Command="{Binding ButtonCommand}" CommandParameter="youadd"/>
+                <Button Content="++" FontSize="18" Width="48" Command="{Binding ButtonCommand}" CommandParameter="youadd10"/>
+            </StackPanel>
+            <ListView Grid.Row="2" ItemsSource="{Binding YourTradeInventory}"/>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Content="🠄 Remove Item" FontSize="24" VerticalAlignment="Center" Command="{Binding ButtonCommand}" CommandParameter="removeitemyour" Grid.Column="0"/>
+            </Grid>
+            <TextBlock Text="Requested Items" FontSize="24" VerticalAlignment="Center" Grid.Row="4"/>
+            <StackPanel Orientation="Horizontal" Grid.Row="5" VerticalAlignment="Center">
+                <Button Content="--" FontSize="18" Width="48" Command="{Binding ButtonCommand}" CommandParameter="partnersub10"/>
+                <Button Content="-" FontSize="18" Width="48" Command="{Binding ButtonCommand}" CommandParameter="partnersub"/>
+                <TextBox Text="{Binding PartnerRequestCash}" IsReadOnly="True" FontSize="24" Width="96" HorizontalContentAlignment="Center"/>
+                <Button Content="+" FontSize="18" Width="48" Command="{Binding ButtonCommand}" CommandParameter="partneradd"/>
+                <Button Content="++" FontSize="18" Width="48" Command="{Binding ButtonCommand}" CommandParameter="partneradd10"/>
+            </StackPanel>
+
+
+            <ListView Grid.Row="6" ItemsSource="{Binding PartnerTradeInventory}"/>
+            <Grid Grid.Row="7" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Content="🠄 Remove Item" FontSize="24" Command="{Binding ButtonCommand}" CommandParameter="removeitempartner" Grid.Column="0"/>
+                <Button Content="Request Trade" FontSize="24" Command="{Binding ButtonCommand}" CommandParameter="sendtrade" Grid.Column="1" Foreground="Blue"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

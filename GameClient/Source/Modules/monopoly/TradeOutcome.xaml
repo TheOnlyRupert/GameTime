@@ -1,0 +1,38 @@
+<Page x:Class="GameClient.Source.Modules.monopoly.TradeOutcome" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d">
+    <Grid HorizontalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="32"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="96"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="{Binding TradeText}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" FontSize="24" HorizontalAlignment="Center"/>
+        <TextBox Text="{Binding YourOfferingCash}" Grid.Column="0" Grid.Row="1" IsReadOnly="True" FontSize="24" Width="96" HorizontalContentAlignment="Center"
+                 HorizontalAlignment="Left"/>
+        <ListView ItemsSource="{Binding YourTradeInventory}" Grid.Column="0" Grid.Row="2" Width="384"/>
+        <TextBlock Text="🠄" Grid.Column="1" Grid.Row="2" FontSize="32" Margin="0 64 0 0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock Text="🠆" Grid.Column="1" Grid.Row="2" FontSize="32" Margin="0 0 0 64" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+        <TextBox Text="{Binding PartnerRequestCash}" Grid.Column="2" Grid.Row="1" IsReadOnly="True" FontSize="24" Width="96" HorizontalContentAlignment="Center"
+                 HorizontalAlignment="Left"/>
+        <ListView ItemsSource="{Binding PartnerTradeInventory}" Grid.Column="2" Grid.Row="2" Width="384"/>
+        <TextBlock Text="You Traded 🠆" Grid.Column="0" Grid.Row="3" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock Text="🠄 You Requested" Grid.Column="2" Grid.Row="3" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding OutcomeText}" Background="{Binding OutcomeBackgroundColor}" FontSize="48" HorizontalContentAlignment="Center" VerticalAlignment="Center"
+                 Width="256" Grid.Column="0" Grid.Row="4" IsReadOnly="True"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2">
+            <Button Content="{Binding ExitButtonText}" FontSize="18" VerticalAlignment="Center" Padding="16 8"/>
+            <TextBlock Text="{Binding TimerText}" FontSize="32" VerticalAlignment="Center" Padding="32 0 0 0" Foreground="Blue"/>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,108 @@
+<Page x:Class="GameClient.Source.Modules.monopoly.PropertyUpgradeViewer" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d">
+    <Grid HorizontalAlignment="Center">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="64"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center">
+                <TextBlock Text="Houses Available" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 16 0"/>
+                <TextBox Text="{Binding HouseAvailableText}" VerticalAlignment="Center" Width="96" FontSize="24" IsReadOnly="True" IsEnabled="False"
+                         HorizontalContentAlignment="Center"/>
+            </StackPanel>
+
+            <Grid ShowGridLines="True" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="0" Grid.Row="0" Visibility="{Binding ImageHouseVisibility1}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="1" Grid.Row="0" Visibility="{Binding ImageHouseVisibility2}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="2" Grid.Row="0" Visibility="{Binding ImageHouseVisibility3}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="3" Grid.Row="0" Visibility="{Binding ImageHouseVisibility4}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="4" Grid.Row="0" Visibility="{Binding ImageHouseVisibility5}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="5" Grid.Row="0" Visibility="{Binding ImageHouseVisibility6}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="0" Grid.Row="1" Visibility="{Binding ImageHouseVisibility7}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="1" Grid.Row="1" Visibility="{Binding ImageHouseVisibility8}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="2" Grid.Row="1" Visibility="{Binding ImageHouseVisibility9}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="3" Grid.Row="1" Visibility="{Binding ImageHouseVisibility10}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="4" Grid.Row="1" Visibility="{Binding ImageHouseVisibility11}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="5" Grid.Row="1" Visibility="{Binding ImageHouseVisibility12}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="0" Grid.Row="2" Visibility="{Binding ImageHouseVisibility13}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="1" Grid.Row="2" Visibility="{Binding ImageHouseVisibility14}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="2" Grid.Row="2" Visibility="{Binding ImageHouseVisibility15}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="3" Grid.Row="2" Visibility="{Binding ImageHouseVisibility16}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="4" Grid.Row="2" Visibility="{Binding ImageHouseVisibility17}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="5" Grid.Row="2" Visibility="{Binding ImageHouseVisibility18}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="0" Grid.Row="3" Visibility="{Binding ImageHouseVisibility19}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="1" Grid.Row="3" Visibility="{Binding ImageHouseVisibility20}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="2" Grid.Row="3" Visibility="{Binding ImageHouseVisibility21}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="3" Grid.Row="3" Visibility="{Binding ImageHouseVisibility22}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="4" Grid.Row="3" Visibility="{Binding ImageHouseVisibility23}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="5" Grid.Row="3" Visibility="{Binding ImageHouseVisibility24}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="0" Grid.Row="4" Visibility="{Binding ImageHouseVisibility25}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="1" Grid.Row="4" Visibility="{Binding ImageHouseVisibility26}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="2" Grid.Row="4" Visibility="{Binding ImageHouseVisibility27}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="3" Grid.Row="4" Visibility="{Binding ImageHouseVisibility28}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="4" Grid.Row="4" Visibility="{Binding ImageHouseVisibility29}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="5" Grid.Row="4" Visibility="{Binding ImageHouseVisibility30}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="0" Grid.Row="5" Visibility="{Binding ImageHouseVisibility31}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/housefulltile.png" Width="32" Grid.Column="1" Grid.Row="5" Visibility="{Binding ImageHouseVisibility32}"/>
+            </Grid>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center">
+                <TextBlock Text="Hotels Available" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 16 0"/>
+                <TextBox Text="{Binding HotelAvailableText}" VerticalAlignment="Center" Width="96" FontSize="24" IsReadOnly="True" IsEnabled="False"
+                         HorizontalContentAlignment="Center"/>
+            </StackPanel>
+
+            <Grid ShowGridLines="True" Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Image Source="../../../Resources/monopoly/lot_upgrades/hotelfulltile.png" Width="64" Grid.Column="0" Grid.Row="0" Visibility="{Binding ImageHotelVisibility1}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/hotelfulltile.png" Width="64" Grid.Column="1" Grid.Row="0" Visibility="{Binding ImageHotelVisibility2}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/hotelfulltile.png" Width="64" Grid.Column="2" Grid.Row="0" Visibility="{Binding ImageHotelVisibility3}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/hotelfulltile.png" Width="64" Grid.Column="3" Grid.Row="0" Visibility="{Binding ImageHotelVisibility4}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/hotelfulltile.png" Width="64" Grid.Column="0" Grid.Row="1" Visibility="{Binding ImageHotelVisibility5}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/hotelfulltile.png" Width="64" Grid.Column="1" Grid.Row="1" Visibility="{Binding ImageHotelVisibility6}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/hotelfulltile.png" Width="64" Grid.Column="2" Grid.Row="1" Visibility="{Binding ImageHotelVisibility7}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/hotelfulltile.png" Width="64" Grid.Column="3" Grid.Row="1" Visibility="{Binding ImageHotelVisibility8}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/hotelfulltile.png" Width="64" Grid.Column="0" Grid.Row="2" Visibility="{Binding ImageHotelVisibility9}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/hotelfulltile.png" Width="64" Grid.Column="1" Grid.Row="2" Visibility="{Binding ImageHotelVisibility10}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/hotelfulltile.png" Width="64" Grid.Column="2" Grid.Row="2" Visibility="{Binding ImageHotelVisibility11}"/>
+                <Image Source="../../../Resources/monopoly/lot_upgrades/hotelfulltile.png" Width="64" Grid.Column="3" Grid.Row="2" Visibility="{Binding ImageHotelVisibility12}"/>
+            </Grid>
+
+            <Button Content="Exit" Command="{Binding ButtonCommand}" Grid.Row="4" CommandParameter="exit" Width="128" FontSize="18" Margin="16"/>
+        </Grid>
+    </Grid>
+</Page>

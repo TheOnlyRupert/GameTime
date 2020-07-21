@@ -51,8 +51,42 @@
             <SubType>Designer</SubType>
         </ApplicationDefinition>
         <Compile Include="Source\Control\DisableNavigation.cs" />
+        <Compile Include="Source\GameLogic\Monopoly.cs" />
         <Compile Include="Source\Modules\GameLobby.xaml.cs" />
         <Compile Include="Source\Modules\Menu.xaml.cs" />
+        <Compile Include="Source\Modules\monopoly\BuyAuction.xaml.cs">
+          <DependentUpon>BuyAuction.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Source\Modules\monopoly\InJail.xaml.cs">
+          <DependentUpon>InJail.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Source\Modules\monopoly\Monopoly.xaml.cs">
+          <DependentUpon>Monopoly.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Source\Modules\monopoly\PropertyManager.xaml.cs">
+          <DependentUpon>PropertyManager.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Source\Modules\monopoly\RentPayment.xaml.cs">
+          <DependentUpon>RentPayment.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Source\Modules\monopoly\PropertyListViewer.xaml.cs">
+          <DependentUpon>PropertyListViewer.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Source\Modules\monopoly\RollDie.xaml.cs">
+          <DependentUpon>RollDie.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Source\Modules\monopoly\SpecialCards.xaml.cs">
+          <DependentUpon>SpecialCards.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Source\Modules\monopoly\TradeRequest.xaml.cs">
+          <DependentUpon>TradeRequest.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Source\Modules\monopoly\TradeOutcome.xaml.cs">
+          <DependentUpon>TradeOutcome.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Source\Modules\monopoly\PropertyUpgradeViewer.xaml.cs">
+          <DependentUpon>PropertyUpgradeViewer.xaml</DependentUpon>
+        </Compile>
         <Compile Include="Source\Reference\ConfigFile.cs" />
         <Compile Include="Source\Reference\ReferenceValues.cs" />
         <Compile Include="Source\SimpleClient.cs" />
@@ -63,6 +97,17 @@
         <Compile Include="Source\ViewModel\GameLobbyVM.cs" />
         <Compile Include="Source\ViewModel\MainWindowVM.cs" />
         <Compile Include="Source\ViewModel\MenuVM.cs" />
+        <Compile Include="Source\ViewModel\monopoly\BuyAuctionVM.cs" />
+        <Compile Include="Source\ViewModel\monopoly\InJailVM.cs" />
+        <Compile Include="Source\ViewModel\monopoly\MonopolyVM.cs" />
+        <Compile Include="Source\ViewModel\monopoly\PropertyManagerVM.cs" />
+        <Compile Include="Source\ViewModel\monopoly\PropertyListViewerVM.cs" />
+        <Compile Include="Source\ViewModel\monopoly\RentPaymentVM.cs" />
+        <Compile Include="Source\ViewModel\monopoly\RollDieVM.cs" />
+        <Compile Include="Source\ViewModel\monopoly\SpecialCardsVM.cs" />
+        <Compile Include="Source\ViewModel\monopoly\TradeOutcomeVM.cs" />
+        <Compile Include="Source\ViewModel\monopoly\TradeRequestVM.cs" />
+        <Compile Include="Source\ViewModel\monopoly\PropertyUpgradeViewerVM.cs" />
         <Page Include="MainWindow.xaml">
             <Generator>MSBuild:Compile</Generator>
             <SubType>Designer</SubType>
@@ -75,6 +120,17 @@
             <DependentUpon>MainWindow.xaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>
+        <Page Include="Source\Modules\monopoly\BuyAuction.xaml" />
+        <Page Include="Source\Modules\monopoly\InJail.xaml" />
+        <Page Include="Source\Modules\monopoly\Monopoly.xaml" />
+        <Page Include="Source\Modules\monopoly\PropertyManager.xaml" />
+        <Page Include="Source\Modules\monopoly\RentPayment.xaml" />
+        <Page Include="Source\Modules\monopoly\PropertyListViewer.xaml" />
+        <Page Include="Source\Modules\monopoly\RollDie.xaml" />
+        <Page Include="Source\Modules\monopoly\SpecialCards.xaml" />
+        <Page Include="Source\Modules\monopoly\TradeRequest.xaml" />
+        <Page Include="Source\Modules\monopoly\TradeOutcome.xaml" />
+        <Page Include="Source\Modules\monopoly\PropertyUpgradeViewer.xaml" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Properties\AssemblyInfo.cs">
@@ -94,11 +150,74 @@
         <None Include="App.config" />
     </ItemGroup>
     <ItemGroup>
-      <Content Include="Resources\icons\icon_main.png" />
+      <Resource Include="Resources\icons\icon_main.png" />
+      <Resource Include="Resources\monopoly\properties\atlantic.PNG" />
+      <Resource Include="Resources\monopoly\properties\baltic.PNG" />
+      <Resource Include="Resources\monopoly\properties\boardwalk.PNG" />
+      <Resource Include="Resources\monopoly\properties\connecticut.PNG" />
+      <Resource Include="Resources\monopoly\properties\electriccomp.PNG" />
+      <Resource Include="Resources\monopoly\properties\illinois.PNG" />
+      <Resource Include="Resources\monopoly\properties\indiana.PNG" />
+      <Resource Include="Resources\monopoly\properties\kentucky.PNG" />
+      <Resource Include="Resources\monopoly\properties\marvingardens.PNG" />
+      <Resource Include="Resources\monopoly\properties\mediterranean.PNG" />
+      <Resource Include="Resources\monopoly\properties\newyork.PNG" />
+      <Resource Include="Resources\monopoly\properties\northcarolina.PNG" />
+      <Resource Include="Resources\monopoly\properties\oriental.PNG" />
+      <Resource Include="Resources\monopoly\properties\pacific.PNG" />
+      <Resource Include="Resources\monopoly\properties\parkplace.PNG" />
+      <Resource Include="Resources\monopoly\properties\pennsylvania.PNG" />
+      <Resource Include="Resources\monopoly\properties\railroadread.PNG" />
+      <Resource Include="Resources\monopoly\properties\railroadpenn.PNG" />
+      <Resource Include="Resources\monopoly\properties\railroadbo.PNG" />
+      <Resource Include="Resources\monopoly\properties\railroadshor.PNG" />
+      <Resource Include="Resources\monopoly\properties\states.PNG" />
+      <Resource Include="Resources\monopoly\properties\stcharles.PNG" />
+      <Resource Include="Resources\monopoly\properties\stjames.PNG" />
+      <Resource Include="Resources\monopoly\properties\tennessee.PNG" />
+      <Resource Include="Resources\monopoly\properties\ventnor.PNG" />
+      <Resource Include="Resources\monopoly\properties\vermont.PNG" />
+      <Resource Include="Resources\monopoly\properties\virginia.PNG" />
+      <Resource Include="Resources\monopoly\properties\waterworks.PNG" />
+      <Resource Include="Resources\monopoly\players\player1.png" />
+      <Resource Include="Resources\monopoly\players\player2.png" />
+      <Resource Include="Resources\monopoly\players\player3.png" />
+      <Resource Include="Resources\monopoly\players\player4.png" />
+      <Resource Include="Resources\monopoly\players\player5.png" />
+      <Resource Include="Resources\monopoly\players\player6.png" />
+      <Resource Include="Resources\monopoly\players\player7.png" />
+      <Resource Include="Resources\monopoly\players\player8.png" />
+      <Resource Include="Resources\monopoly\jail.png" />
+      <Resource Include="Resources\monopoly\lot_upgrades\hotel.png" />
+      <Resource Include="Resources\monopoly\lot_upgrades\house1.png" />
+      <Resource Include="Resources\monopoly\lot_upgrades\house2.png" />
+      <Resource Include="Resources\monopoly\lot_upgrades\house3.png" />
+      <Resource Include="Resources\monopoly\lot_upgrades\house4.png" />
+      <Resource Include="Resources\monopoly\lot_upgrades\housefulltile.png" />
+      <Resource Include="Resources\monopoly\lot_upgrades\hotelfulltile.png" />
+      <Resource Include="Resources\monopoly\cards\chance.PNG" />
+      <Resource Include="Resources\monopoly\cards\chancejail.png" />
+      <Resource Include="Resources\monopoly\cards\chest.PNG" />
+      <Resource Include="Resources\monopoly\cards\chestjail.png" />
+      <Resource Include="Resources\monopoly\die\background.png" />
+      <Resource Include="Resources\monopoly\die\l1.png" />
+      <Resource Include="Resources\monopoly\die\l2.png" />
+      <Resource Include="Resources\monopoly\die\l3.png" />
+      <Resource Include="Resources\monopoly\die\l4.png" />
+      <Resource Include="Resources\monopoly\die\l5.png" />
+      <Resource Include="Resources\monopoly\die\l6.png" />
+      <Resource Include="Resources\monopoly\die\r1.png" />
+      <Resource Include="Resources\monopoly\die\r2.png" />
+      <Resource Include="Resources\monopoly\die\r3.png" />
+      <Resource Include="Resources\monopoly\die\r4.png" />
+      <Resource Include="Resources\monopoly\die\r5.png" />
+      <Resource Include="Resources\monopoly\die\r6.png" />
+      <Resource Include="Resources\monopoly\die\jail.png" />
       <Content Include="Resources\sounds\connected.mp3" />
       <Content Include="Resources\sounds\lost.mp3" />
       <Page Include="Source\Modules\GameLobby.xaml" />
       <Page Include="Source\Modules\Menu.xaml" />
+      <Resource Include="Resources\monopoly\monopoly.PNG" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

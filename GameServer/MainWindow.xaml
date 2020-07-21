@@ -7,7 +7,7 @@
             <RowDefinition Height="24"/>
         </Grid.RowDefinitions>
 
-        <ListView Margin="8" ItemsSource="{Binding ConnectedClients}">
+        <ListView Margin="8" ItemsSource="{Binding ConnectedClients}" SelectedItem="ConnectedClientSelected">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="ID" Width="32" DisplayMemberBinding="{Binding ID}"/>

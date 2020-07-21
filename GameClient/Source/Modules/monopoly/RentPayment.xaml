@@ -1,0 +1,28 @@
+<Page x:Class="GameClient.Source.Modules.monopoly.RentPayment" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d">
+    <Grid HorizontalAlignment="Center">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="64"/>
+                <RowDefinition Height="64"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="64"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Payment Required" FontSize="24" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <TextBlock Text="{Binding PaymentReasonText}" FontSize="20" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+            <Image Source="{Binding PropertyImage}" Width="384" Grid.Row="2"/>
+            <StackPanel Orientation="Horizontal" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="Available Cash  $" FontSize="24" VerticalAlignment="Center"/>
+                <TextBox Text="{Binding YourAvailableCash}" FontSize="24" HorizontalContentAlignment="Center" Width="96" IsReadOnly="True"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="4" Margin="16">
+                <Button Content="Pay Amount" Command="{Binding ButtonCommand}" CommandParameter="pay" Width="128" FontSize="18"/>
+                <Button Content="Postpone" Command="{Binding ButtonCommand}" CommandParameter="exit" Width="128" FontSize="18"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,432 @@
+<Page x:Class="GameClient.Source.Modules.monopoly.Monopoly" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d">
+    <Viewbox HorizontalAlignment="Center">
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Width="384">
+                <Grid Name="Player1" Background="IndianRed" Height="64" Margin="16 16 16 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="TheOnlyRupert   (P1)" FontSize="32" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="$1,500" FontSize="20" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBlock Text="Monopolies:  0" FontSize="20" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+                <Grid Name="Player2" Background="Yellow" Height="64" Margin="16 16 16 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="TheOnlyCletus   (P2)" FontSize="32" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="$1,500" FontSize="20" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBlock Text="Monopolies:  0" FontSize="20" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+                <Grid Name="Player3" Background="Blue" Height="64" Margin="16 16 16 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="TheOnlyPaperCut   (P3)" FontSize="32" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="$1,500" FontSize="20" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBlock Text="Monopolies:  0" FontSize="20" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+                <Grid Name="Player4" Background="Green" Height="64" Margin="16 16 16 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="TheOnlyRain6   (P4)" FontSize="32" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="$1,500" FontSize="20" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBlock Text="Monopolies:  0" FontSize="20" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+                <Grid Name="Player5" Background="LightGray" Height="64" Margin="16 16 16 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="TactiKale   (P5)" FontSize="32" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="$1,500" FontSize="20" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBlock Text="Monopolies:  0" FontSize="20" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+                <Grid Name="Player6" Background="HotPink" Height="64" Margin="16 16 16 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="RickleTickle   (P6)" FontSize="32" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="$1,500" FontSize="20" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBlock Text="Monopolies:  0" FontSize="20" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+                <Grid Name="Player7" Background="SaddleBrown" Height="64" Margin="16 16 16 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="GetRekt   (P7)" FontSize="32" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="$1,500" FontSize="20" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBlock Text="Monopolies:  0" FontSize="20" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+                <Grid Name="Player8" Background="LightSkyBlue" Height="64" Margin="16 16 16 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="Admin   (P8)" FontSize="32" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="$1,500" FontSize="20" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBlock Text="Monopolies:  0" FontSize="20" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </StackPanel>
+
+            <Button Command="{Binding ButtonCommand}" CommandParameter="board_jail" Background="Transparent" BorderThickness="0" HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom" Width="128" Height="128">
+                <Image Source="../../../Resources/monopoly/jail.png"/>
+            </Button>
+
+
+            <Viewbox>
+                <Grid Width="1080" Height="1080">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1.65*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="1.65*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1.65*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="1.65*"/>
+                    </Grid.RowDefinitions>
+
+                    <Image Source="../../../Resources/monopoly/monopoly.PNG" Grid.Column="0" Grid.ColumnSpan="11" Grid.Row="0" Grid.RowSpan="11"/>
+
+                    <Button Grid.Column="0" Grid.Row="0" Command="{Binding ButtonCommand}" CommandParameter="board_freeparking" Background="Transparent" BorderThickness="0"/>
+                    <Button Grid.Column="1" Grid.Row="0" Command="{Binding ButtonCommand}" CommandParameter="board_kentucky" Background="Transparent" BorderThickness="0">
+                        <Grid>
+                            <Image Source="../../../Resources/monopoly/lot_upgrades/house4.png" Height="256" Stretch="Fill">
+                                <Image.RenderTransform>
+                                    <RotateTransform Angle="180" CenterX="44" CenterY="72"/>
+                                </Image.RenderTransform>
+                            </Image>
+                        </Grid>
+                    </Button>
+                    <Button Grid.Column="2" Grid.Row="0" Command="{Binding ButtonCommand}" CommandParameter="board_chancetop" Background="Transparent" BorderThickness="0"/>
+                    <Button Grid.Column="3" Grid.Row="0" Command="{Binding ButtonCommand}" CommandParameter="board_indiana" Background="Transparent" BorderThickness="0">
+                        <Grid>
+                            <Image Source="../../../Resources/monopoly/lot_upgrades/house4.png" Height="256" Stretch="Fill">
+                                <Image.RenderTransform>
+                                    <RotateTransform Angle="180" CenterX="43" CenterY="72"/>
+                                </Image.RenderTransform>
+                            </Image>
+                        </Grid>
+                    </Button>
+                    <Button Grid.Column="4" Grid.Row="0" Command="{Binding ButtonCommand}" CommandParameter="board_illinois" Background="Transparent" BorderThickness="0">
+                        <Grid>
+                            <Image Source="../../../Resources/monopoly/lot_upgrades/house4.png" Height="256" Stretch="Fill">
+                                <Image.RenderTransform>
+                                    <RotateTransform Angle="180" CenterX="43" CenterY="72"/>
+                                </Image.RenderTransform>
+                            </Image>
+                        </Grid>
+                    </Button>
+                    <Button Grid.Column="5" Grid.Row="0" Command="{Binding ButtonCommand}" CommandParameter="board_railroadtop" Background="Transparent" BorderThickness="0"/>
+                    <Button Grid.Column="6" Grid.Row="0" Command="{Binding ButtonCommand}" CommandParameter="board_atlantic" Background="Transparent" BorderThickness="0">
+                        <Grid>
+                            <Image Source="../../../Resources/monopoly/lot_upgrades/house4.png" Height="256" Stretch="Fill">
+                                <Image.RenderTransform>
+                                    <RotateTransform Angle="180" CenterX="43" CenterY="72"/>
+                                </Image.RenderTransform>
+                            </Image>
+                        </Grid>
+                    </Button>
+                    <Button Grid.Column="7" Grid.Row="0" Command="{Binding ButtonCommand}" CommandParameter="board_ventnor" Background="Transparent" BorderThickness="0">
+                        <Grid>
+                            <Image Source="../../../Resources/monopoly/lot_upgrades/house4.png" Height="256" Width="86" Stretch="Fill">
+                                <Image.RenderTransform>
+                                    <RotateTransform Angle="180" CenterX="44" CenterY="72"/>
+                                </Image.RenderTransform>
+                            </Image>
+                        </Grid>
+                    </Button>
+                    <Button Grid.Column="8" Grid.Row="0" Command="{Binding ButtonCommand}" CommandParameter="board_waterworks" Background="Transparent" BorderThickness="0"/>
+                    <Button Grid.Column="9" Grid.Row="0" Command="{Binding ButtonCommand}" CommandParameter="board_marvingardens" Background="Transparent" BorderThickness="0">
+                        <Grid>
+                            <Image Source="../../../Resources/monopoly/lot_upgrades/hotel.png" Height="256" Width="86" Stretch="Fill">
+                                <Image.RenderTransform>
+                                    <RotateTransform Angle="180" CenterX="43" CenterY="72"/>
+                                </Image.RenderTransform>
+                            </Image>
+                        </Grid>
+                    </Button>
+                    <Button Grid.Column="10" Grid.Row="0" Command="{Binding ButtonCommand}" CommandParameter="board_gotojail" Background="Transparent" BorderThickness="0"/>
+
+                    <Button Grid.Column="0" Grid.Row="1" Command="{Binding ButtonCommand}" CommandParameter="board_newyork" Background="Transparent" BorderThickness="0">
+                        <Grid>
+                            <Image Source="../../../Resources/monopoly/lot_upgrades/house4.png" Height="256" Width="86" Stretch="Fill">
+                                <Image.RenderTransform>
+                                    <RotateTransform Angle="90" CenterX="58" CenterY="59"/>
+                                </Image.RenderTransform>
+                            </Image>
+                        </Grid>
+                    </Button>
+                    <Button Grid.Column="0" Grid.Row="2" Command="{Binding ButtonCommand}" CommandParameter="board_tennessee" Background="Transparent" BorderThickness="0">
+                        <Grid>
+                            <Image Source="../../../Resources/monopoly/lot_upgrades/house4.png" Height="256" Width="86" Stretch="Fill">
+                                <Image.RenderTransform>
+                                    <RotateTransform Angle="90" CenterX="58" CenterY="59"/>
+                                </Image.RenderTransform>
+                            </Image>
+                        </Grid>
+                    </Button>
+                    <Button Grid.Column="0" Grid.Row="3" Command="{Binding ButtonCommand}" CommandParameter="board_chestleft" Background="Transparent" BorderThickness="0"/>
+                    <Button Grid.Column="0" Grid.Row="4" Command="{Binding ButtonCommand}" CommandParameter="board_stjamesplace" Background="Transparent" BorderThickness="0">
+                        <Grid>
+                            <Image Source="../../../Resources/monopoly/lot_upgrades/house4.png" Height="256" Width="86" Stretch="Fill">
+                                <Image.RenderTransform>
+                                    <RotateTransform Angle="90" CenterX="58" CenterY="59"/>
+                                </Image.RenderTransform>
+                            </Image>
+                        </Grid>
+                    </Button>
+                    <Button Grid.Column="0" Grid.Row="5" Command="{Binding ButtonCommand}" CommandParameter="board_railroadleft" Background="Transparent" BorderThickness="0"/>
+                    <Button Grid.Column="0" Grid.Row="6" Command="{Binding ButtonCommand}" CommandParameter="board_virginia" Background="Transparent" BorderThickness="0">
+                        <Grid>
+                            <Image Source="../../../Resources/monopoly/lot_upgrades/house4.png" Height="256" Width="86" Stretch="Fill">
+                                <Image.RenderTransform>
+                                    <RotateTransform Angle="90" CenterX="58" CenterY="59"/>
+                                </Image.RenderTransform>
+                            </Image>
+                        </Grid>
+                    </Button>
+                    <Button Grid.Column="0" Grid.Row="7" Command="{Binding ButtonCommand}" CommandParameter="board_states" Background="Transparent" BorderThickness="0">
+                        <Grid>
+                            <Image Source="../../../Resources/monopoly/lot_upgrades/house4.png" Height="256" Width="86" Stretch="Fill">
+                                <Image.RenderTransform>
+                                    <RotateTransform Angle="90" CenterX="58" CenterY="59"/>
+                                </Image.RenderTransform>
+                            </Image>
+                        </Grid>
+                    </Button>
+                    <Button Grid.Column="0" Grid.Row="8" Command="{Binding ButtonCommand}" CommandParameter="board_electriccompany" Background="Transparent" BorderThickness="0"/>
+                    <Button Grid.Column="0" Grid.Row="9" Command="{Binding ButtonCommand}" CommandParameter="board_stcharlesplace" Background="Transparent" BorderThickness="0">
+                        <Grid>
+                            <Image Source="../../../Resources/monopoly/lot_upgrades/house4.png" Height="256" Width="86" Stretch="Fill">
+                                <Image.RenderTransform>
+                                    <RotateTransform Angle="90" CenterX="58" CenterY="59"/>
+                                </Image.RenderTransform>
+                            </Image>
+                        </Grid>
+                    </Button>
+
+                    <Button Grid.Column="10" Grid.Row="1" Command="{Binding ButtonCommand}" CommandParameter="board_pacific" Background="Transparent" BorderThickness="0">
+                        <Grid>
+                            <Image Source="../../../Resources/monopoly/lot_upgrades/house4.png" Height="256" Width="86" Stretch="Fill">
+                                <Image.RenderTransform>
+                                    <RotateTransform Angle="-90" CenterX="28" CenterY="59"/>
+                                </Image.RenderTransform>
+                            </Image>
+                        </Grid>
+                    </Button>
+                    <Button Grid.Column="10" Grid.Row="2" Command="{Binding ButtonCommand}" CommandParameter="board_northcarolina" Background="Transparent" BorderThickness="0">
+                        <Grid>
+                            <Image Source="../../../Resources/monopoly/lot_upgrades/house4.png" Height="256" Width="86" Stretch="Fill">
+                                <Image.RenderTransform>
+                                    <RotateTransform Angle="-90" CenterX="28" CenterY="59"/>
+                                </Image.RenderTransform>
+                            </Image>
+                        </Grid>
+                    </Button>
+                    <Button Grid.Column="10" Grid.Row="3" Command="{Binding ButtonCommand}" CommandParameter="board_chestright" Background="Transparent" BorderThickness="0"/>
+                    <Button Grid.Column="10" Grid.Row="4" Command="{Binding ButtonCommand}" CommandParameter="board_pennsylvania" Background="Transparent" BorderThickness="0">
+                        <Grid>
+                            <Image Source="../../../Resources/monopoly/lot_upgrades/house4.png" Height="256" Width="86" Stretch="Fill">
+                                <Image.RenderTransform>
+                                    <RotateTransform Angle="-90" CenterX="28" CenterY="59"/>
+                                </Image.RenderTransform>
+                            </Image>
+                        </Grid>
+                    </Button>
+                    <Button Grid.Column="10" Grid.Row="5" Command="{Binding ButtonCommand}" CommandParameter="board_railroadright" Background="Transparent" BorderThickness="0"/>
+                    <Button Grid.Column="10" Grid.Row="6" Command="{Binding ButtonCommand}" CommandParameter="board_chanceright" Background="Transparent" BorderThickness="0"/>
+                    <Button Grid.Column="10" Grid.Row="7" Command="{Binding ButtonCommand}" CommandParameter="board_parkplace" Background="Transparent" BorderThickness="0">
+                        <Grid>
+                            <Image Source="../../../Resources/monopoly/lot_upgrades/house4.png" Height="256" Width="86" Stretch="Fill">
+                                <Image.RenderTransform>
+                                    <RotateTransform Angle="-90" CenterX="28" CenterY="59"/>
+                                </Image.RenderTransform>
+                            </Image>
+                        </Grid>
+                    </Button>
+                    <Button Grid.Column="10" Grid.Row="8" Command="{Binding ButtonCommand}" CommandParameter="board_luxurytax" Background="Transparent" BorderThickness="0"/>
+                    <Button Grid.Column="10" Grid.Row="9" Command="{Binding ButtonCommand}" CommandParameter="board_boardwalk" Background="Transparent" BorderThickness="0">
+                        <Grid>
+                            <Image Source="../../../Resources/monopoly/lot_upgrades/house4.png" Height="256" Width="86" Stretch="Fill">
+                                <Image.RenderTransform>
+                                    <RotateTransform Angle="-90" CenterX="28" CenterY="59"/>
+                                </Image.RenderTransform>
+                            </Image>
+                        </Grid>
+                    </Button>
+
+                    <Button Grid.Column="0" Grid.Row="10" Command="{Binding ButtonCommand}" CommandParameter="board_jailvisting" Background="Transparent" BorderThickness="0"/>
+                    <Button Grid.Column="1" Grid.Row="10" Command="{Binding ButtonCommand}" CommandParameter="board_connecticut" Background="Transparent" BorderThickness="0">
+                        <Grid>
+                            <Image Source="../../../Resources/monopoly/lot_upgrades/hotel.png" Height="256" Stretch="Fill"/>
+                        </Grid>
+                    </Button>
+                    <Button Grid.Column="2" Grid.Row="10" Command="{Binding ButtonCommand}" CommandParameter="board_vermont" Background="Transparent" BorderThickness="0">
+                        <Grid>
+                            <Image Source="../../../Resources/monopoly/lot_upgrades/house4.png" Height="256" Stretch="Fill"/>
+                        </Grid>
+                    </Button>
+                    <Button Grid.Column="3" Grid.Row="10" Command="{Binding ButtonCommand}" CommandParameter="board_chancebottom" Background="Transparent" BorderThickness="0"/>
+                    <Button Grid.Column="4" Grid.Row="10" Command="{Binding ButtonCommand}" CommandParameter="board_oriental" Background="Transparent" BorderThickness="0">
+                        <Grid>
+                            <Image Source="../../../Resources/monopoly/lot_upgrades/house3.png" Height="256" Stretch="Fill"/>
+                        </Grid>
+                    </Button>
+                    <Button Grid.Column="5" Grid.Row="10" Command="{Binding ButtonCommand}" CommandParameter="board_railroadbottom" Background="Transparent" BorderThickness="0"/>
+                    <Button Grid.Column="6" Grid.Row="10" Command="{Binding ButtonCommand}" CommandParameter="board_incometax" Background="Transparent" BorderThickness="0"/>
+                    <Button Grid.Column="7" Grid.Row="10" Command="{Binding ButtonCommand}" CommandParameter="board_baltic" Background="Transparent" BorderThickness="0">
+                        <Grid>
+                            <Image Source="../../../Resources/monopoly/lot_upgrades/house2.png" Height="256" Stretch="Fill"/>
+                        </Grid>
+                    </Button>
+                    <Button Grid.Column="8" Grid.Row="10" Command="{Binding ButtonCommand}" CommandParameter="board_chestbottom" Background="Transparent" BorderThickness="0"/>
+                    <Button Grid.Column="9" Grid.Row="10" Command="{Binding ButtonCommand}" CommandParameter="board_mediterranean" Background="Transparent" BorderThickness="0">
+                        <Grid>
+                            <Image Source="../../../Resources/monopoly/lot_upgrades/house1.png" Height="256" Stretch="Fill"/>
+                        </Grid>
+                    </Button>
+                    <Button Grid.Column="10" Grid.Row="10" Command="{Binding ButtonCommand}" CommandParameter="board_go" Background="Transparent" BorderThickness="0"/>
+
+
+                    <Image Source="../../../Resources/monopoly/players/player1.PNG" Grid.Column="0" Grid.ColumnSpan="11" Grid.Row="0" Grid.RowSpan="11" Width="128" Height="128"
+                           Focusable="False">
+                        <Image.RenderTransform>
+                            <TranslateTransform X="-475" Y="475"/>
+                        </Image.RenderTransform>
+                    </Image>
+                    <Image Source="../../../Resources/monopoly/players/player2.PNG" Grid.Column="0" Grid.ColumnSpan="11" Grid.Row="0" Grid.RowSpan="11" Width="128" Height="128">
+                        <Image.RenderTransform>
+                            <TranslateTransform X="-475" Y="475"/>
+                        </Image.RenderTransform>
+                    </Image>
+                    <Image Source="../../../Resources/monopoly/players/player3.PNG" Grid.Column="0" Grid.ColumnSpan="11" Grid.Row="0" Grid.RowSpan="11" Width="128" Height="128"
+                           Visibility="{Binding Player3Visibility}">
+                        <Image.RenderTransform>
+                            <TranslateTransform X="-475" Y="475"/>
+                        </Image.RenderTransform>
+                    </Image>
+                    <Image Source="../../../Resources/monopoly/players/player4.PNG" Grid.Column="0" Grid.ColumnSpan="11" Grid.Row="0" Grid.RowSpan="11" Width="128" Height="128"
+                           Visibility="{Binding Player4Visibility}">
+                        <Image.RenderTransform>
+                            <TranslateTransform X="-475" Y="475"/>
+                        </Image.RenderTransform>
+                    </Image>
+                    <Image Source="../../../Resources/monopoly/players/player5.PNG" Grid.Column="0" Grid.ColumnSpan="11" Grid.Row="0" Grid.RowSpan="11" Width="128" Height="128"
+                           Visibility="{Binding Player5Visibility}">
+                        <Image.RenderTransform>
+                            <TranslateTransform X="-475" Y="475"/>
+                        </Image.RenderTransform>
+                    </Image>
+                    <Image Source="../../../Resources/monopoly/players/player6.PNG" Grid.Column="0" Grid.ColumnSpan="11" Grid.Row="0" Grid.RowSpan="11" Width="128" Height="128"
+                           Visibility="{Binding Player6Visibility}">
+                        <Image.RenderTransform>
+                            <TranslateTransform X="-475" Y="475"/>
+                        </Image.RenderTransform>
+                    </Image>
+                    <Image Source="../../../Resources/monopoly/players/player7.PNG" Grid.Column="0" Grid.ColumnSpan="11" Grid.Row="0" Grid.RowSpan="11" Width="128" Height="128"
+                           Visibility="{Binding Player7Visibility}">
+                        <Image.RenderTransform>
+                            <TranslateTransform X="-475" Y="475"/>
+                        </Image.RenderTransform>
+                    </Image>
+                    <Image Source="../../../Resources/monopoly/players/player8.PNG" Grid.Column="0" Grid.ColumnSpan="11" Grid.Row="0" Grid.RowSpan="11" Width="128" Height="128"
+                           Visibility="{Binding Player8Visibility}">
+                        <Image.RenderTransform>
+                            <TranslateTransform X="-475" Y="475"/>
+                        </Image.RenderTransform>
+                    </Image>
+                </Grid>
+            </Viewbox>
+
+            <Grid Width="128"/>
+
+            <Grid Width="384">
+                <Button Content="Trade Request"/>
+                <Button Content="Upgrade Lot"/>
+                <Button Content="Roll Die"/>
+                <Button Content="Property Manager"/>
+                <Button Content="End Turn"/>
+
+                <Button Content="Property List"/>
+                <Button Content="Join Auction"/>
+            </Grid>
+        </StackPanel>
+    </Viewbox>
+</Page>
